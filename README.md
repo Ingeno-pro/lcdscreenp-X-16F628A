@@ -25,6 +25,8 @@ You can edit pin-attribution by editing the attribution in "lcdscreenp16x2.h". B
 The provided library is very easy to use. You have to first Create a `LCDScreen` object then initialize it by using `LCDScreen_init(&lcd_object_name)`  
 Here is an example :  
 ```
+LCDScreen lcd;
+
 void main(void) {
     
     //Mise de tous les port en sortie 
