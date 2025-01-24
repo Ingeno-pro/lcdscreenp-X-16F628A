@@ -17,6 +17,35 @@ You can edit pin-attribution by editing the attribution in "lcdscreenp16x2.h". B
 #define D5 PORTBbits.RB7
 #define D6 PORTAbits.RA6
 #define D7 PORTAbits.RA7
-
 ```
+/!\ Warning : Mind to not put any of these pin on : RA5 or RA4 ( without pull up resistor )  
+/!\ Warning : Don't forget to disable periphericals associated with the pin that you want to use
+
+### Documentation
+The provided library is very easy to use. You have to first Create a `LCDScreen` object then initialize it by using `LCDScreen_init(&lcd_object_name)`  
+Here is an example :  
+```
+void main(void) {
+    
+    //Mise de tous les port en sortie 
+    TRISA &= 0x00;
+    TRISB &= 0x00;
+
+    CMCON = 0x07; //Désactivation des comparateurs
+
+    PORTA = 0b00000000;
+    PORTB = 0x00;
+    
+    __delay_ms(50);
+    LCDScreen_init(&lcd);
+    lcd.cursor_blink();
+    
+    while(1){
+        //Do your stuff
+    }
+    return;
+}
+```
+
+
 
