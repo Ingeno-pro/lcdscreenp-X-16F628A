@@ -48,6 +48,10 @@ void main(void) {
     return;
 }
 ```
-
+Here is some information about library's functions
+`lcd.cursor_blink()` : Enable / Disable cursor blinking  
+`lcd.write(char c)` : Write a character  at the cursor position  
+`lcd.print(int x, int y, char *str)` : Write a message at column x and line y   
+`lcd.clear()` : Clear the LCD display  
 
 
