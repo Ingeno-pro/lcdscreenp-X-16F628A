@@ -54,4 +54,8 @@ Here is some information about library's functions
 `lcd.print(int x, int y, char *str)` : Write a message at column x and line y   
 `lcd.clear()` : Clear the LCD display  
 
+## Changelog
+
+19/01/2025 : lcdscreenp-X-16F628A  v1.0 release
+
 Please, if you have any suggest/question contact me on contact@ingeno.fr
